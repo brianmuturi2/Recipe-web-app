@@ -19,26 +19,27 @@ let state = {};
 const ctrlSearch = async () => {
     // 1. Get query from view
     //TODO: 
-    const query = searchView.getInput();
-    console.log(query);
+    // const query = searchView.getInput();
+    const query = 'pizza';
+    // console.log(query);
 
     if (query){
         // 2. New search object and add to state
         state.search = new Search(query);
 
         // 3. Prepare UI for results
-        searchView.clearResults();
         searchView.clearInput();
+        searchView.clearResults();
         renderLoader(elements.searchRes);
 
-        try{
+        try {
             // 4. Search for recipe
             await state.search.getResults();
 
             // 5. Render results on UI
             clearLoader();
             searchView.renderResults(state.search.recipeReceived);
-        }catch(error){
+        } catch (err) {
             alert(`Something went wrong with the search...`);
             clearLoader();
         }
@@ -46,6 +47,14 @@ const ctrlSearch = async () => {
 };
 
 elements.searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    ctrlSearch();
+});
+
+/**
+ * Testing purposes
+ */
+window.addEventListener('load', e => {
     e.preventDefault();
     ctrlSearch();
 });
@@ -72,6 +81,10 @@ const controlRecipe = async () => {
         // Create new recipe object
         state.recipe = new Recipe(id);
 
+        /**
+         * Testing
+         */
+        window.ru = state.recipe;
         try{
             // Get recipe data
             await state.recipe.getRecipe();
