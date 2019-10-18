@@ -16,7 +16,6 @@ import { elements, renderLoader, clearLoader } from './views/base';
  */
 
 let state = {};
-window.state = state;
 
 /**
  * SEARCH CONTROLLER
@@ -26,7 +25,6 @@ const controlSearch = async () => {
     // 1. Get query from view
     //TODO: 
     const query = searchView.getInput();
-    // console.log(query);
 
     if (query){
         // 2. New search object and add to state
@@ -70,7 +68,6 @@ elements.searchResPages.addEventListener('click', e => {
  */
 const controlRecipe = async () => {
     const id = window.location.hash.replace('#', '');
-    // console.log(id);
 
     if (id) {
         // Prepare UI for changes
@@ -99,7 +96,6 @@ const controlRecipe = async () => {
                 state.likes.isLiked(id)
                 );
         }catch(error){
-            console.log(error);
             alert('Error processing recipe');
         }
     }
@@ -125,7 +121,6 @@ const controlList = () => {
 // Handle delete and update list item events
 elements.shopping.addEventListener('click', e => {
     const id = e.target.closest('.shopping__item').dataset.itemid;
-    console.log(id);
 
     // Handle the delete event
     if (e.target.matches('.shopping__delete, .shopping__delete *')) {
@@ -215,8 +210,6 @@ elements.recipe.addEventListener('click', e => {
     }
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 });
-
-window.l = new List();
 
 
 
