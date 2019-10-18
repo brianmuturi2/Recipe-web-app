@@ -15,8 +15,8 @@ export const highlightSelected = id => {
     const resultsArr = Array.from(document.querySelectorAll('.results__link'));
     resultsArr.forEach(el => {
         el.classList.remove('results__link--active');
-    })
-    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+    });
+    document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active');
 };
 
 /**
@@ -28,7 +28,7 @@ export const highlightSelected = id => {
  * acc:18  / acc + cur.length(and) = 24 / newTitle = ['tomato'] (not pushed to new array) 
  */
 
-const limitRecipeTitle = (title, limit = 17)=>{
+export const limitRecipeTitle = (title, limit = 17)=>{
     // Adding propeties to an array & object isn't mutating the variable
     const newTitle = [];
     if(title.length > limit){
@@ -40,7 +40,7 @@ const limitRecipeTitle = (title, limit = 17)=>{
         }, 0);
 
         // return the result
-        return `${newTitle.join(' ')}...`;
+        return `${newTitle.join(' ')} ...`;
     }
     return title;
 }

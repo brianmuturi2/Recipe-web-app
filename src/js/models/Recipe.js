@@ -63,16 +63,14 @@ export default class Recipe {
                     unit: arrIng[unitIndex],
                     ingredient: arrIng.slice(unitIndex + 1).join(' ')
                 }; 
-            }
-            else if (parseInt(arrIng[0], 10)){
+            } else if (parseInt(arrIng[0], 10)){
                 // There's no unit, but 1st element is number
                 objIng = {
                     count: parseInt(arrIng[0], 10),
                     unit: '',
                     ingredient: arrIng.slice(1).join(' ')
                 }
-            }
-            else if (unitIndex === -1){
+            } else if (unitIndex === -1){
                 objIng = {
                     count: 1,
                     unit: '',
