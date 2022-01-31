@@ -1,4 +1,4 @@
-import { elements } from './base';
+import {elements} from './base';
 
 export const getInput = () => elements.searchInput.value;
 
@@ -25,15 +25,15 @@ export const highlightSelected = id => {
  * acc:5  / acc + cur.length(with) = 9 / newTitle = ['with']
  * acc:9  / acc + cur.length(with) = 15 / newTitle = ['tomato']
  * acc:15  / acc + cur.length(and) = 18 / newTitle = ['and'] (not pushed to new array)
- * acc:18  / acc + cur.length(and) = 24 / newTitle = ['tomato'] (not pushed to new array) 
+ * acc:18  / acc + cur.length(and) = 24 / newTitle = ['tomato'] (not pushed to new array)
  */
 
-export const limitRecipeTitle = (title, limit = 17)=>{
+export const limitRecipeTitle = (title, limit = 17) => {
     // Adding propeties to an array & object isn't mutating the variable
     const newTitle = [];
-    if(title.length > limit){
+    if (title.length > limit) {
         title.split(' ').reduce((acc, cur) => {
-            if (acc + cur.length <= limit){
+            if (acc + cur.length <= limit) {
                 newTitle.push(cur);
             }
             return acc + cur.length;
@@ -98,7 +98,7 @@ export const renderResults = (recipes, page = 2, resPerPage = 10) => {
     const end = page * resPerPage;
 
     recipes.slice(start, end).forEach(renderRecipe);
-    
+
     // Render pagination buttons
     renderButtons(page, recipes.length, resPerPage);
 };

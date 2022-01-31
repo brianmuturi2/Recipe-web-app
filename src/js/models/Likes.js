@@ -1,9 +1,9 @@
 export default class Likes {
-    constructor(){
+    constructor() {
         this.likes = [];
     }
 
-    addLike(id, title, author, img){
+    addLike(id, title, author, img) {
         const like = {id, title, author, img};
         this.likes.push(like);
 
@@ -13,7 +13,7 @@ export default class Likes {
         return like;
     }
 
-    deleteLike(id){
+    deleteLike(id) {
         const index = this.likes.findIndex(el => el.id === id);
         this.likes.splice(index, 1);
 
@@ -21,19 +21,19 @@ export default class Likes {
         this.persistData();
     }
 
-    isLiked(id){
+    isLiked(id) {
         return this.likes.findIndex(el => el.id === id) !== -1;
     }
 
-    getNumLikes(){
-        return this.likes.length; 
+    getNumLikes() {
+        return this.likes.length;
     }
-    
-    persistData(){
+
+    persistData() {
         localStorage.setItem('likes', JSON.stringify(this.likes));
     }
 
-    readStorage(){
+    readStorage() {
         const storage = JSON.parse(localStorage.getItem('likes'));
 
         // Restore likes from the localStorage
