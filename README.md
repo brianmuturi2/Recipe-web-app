@@ -114,7 +114,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. Compile sass
+3. Spin up development server
    ```sh
    npm start
    ```  
