@@ -26,10 +26,10 @@
     <img src="img/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Hotel booking website template</h3>
+<h3 align="center">Recipe searching website</h3>
 
   <p align="center">
-    A landing page template for booking a hotel.
+    A website for searching recipes based on a given meal/ food.
     <br />
     <!--
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
@@ -76,7 +76,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-A landing page for booking hotel
+A website for searching recipes based on a given meal/ food.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,6 +86,7 @@ A landing page for booking hotel
 
 * [HTML](https://www.w3schools.com/html/default.asp)
 * [CSS](https://www.w3schools.com/css/default.asp)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
