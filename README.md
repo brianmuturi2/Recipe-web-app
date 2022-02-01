@@ -22,8 +22,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/brianmuturi2/Hotel-booking-website-template">
-    <img src="img/favicon.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/brianmuturi2/Recipe-web-app">
+    <img src="dist/img/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Recipe searching website</h3>
@@ -108,7 +108,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/brianmuturi2/Hotel-booking-website-template.git
+   git clone https://github.com/brianmuturi2/Recipe-web-app.git
    ```
 2. Install NPM packages
    ```sh
@@ -116,9 +116,8 @@ This is an example of how to list things you need to use the software and how to
    ```
 3. Compile sass
    ```sh
-   npm run compile:sass
-   ```
-4. Run index.html   
+   npm start
+   ```  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -127,11 +126,11 @@ This is an example of how to list things you need to use the software and how to
 
 The following are the features implemented in the application.
 
-* Sass variables & imports
-* Media queries
-* Scss
-* Flexbox layout
-* Sprite svg image
+* Querying a recipe endpoint
+* Listing all recipes
+* Viewing a specific recipe
+* Add and remove ingredients from a shopping list
+* Webpack module bundler
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
